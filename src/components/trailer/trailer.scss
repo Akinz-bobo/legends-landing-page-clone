@@ -1,0 +1,70 @@
+@use "../../mixin.scss" as *;
+.trailer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+  @include tablet() {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .trailer__img {
+      order: 2;
+      height: 50% !important;
+      img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+      }
+    }
+    .trailer__info {
+      height: 50% !important;
+      padding-top: 6rem;
+      text-align: center;
+      width: 100%;
+      iframe {
+        height: 14rem !important;
+      }
+    }
+  }
+  @include phone() {
+    .trailer__info {
+      .title {
+        line-height: 2rem;
+        span {
+          font-size: 0.9rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+          line-height: 1.2rem;
+        }
+      }
+      iframe {
+        width: 90% !important;
+        height: 10rem !important;
+      }
+    }
+  }
+  .trailer__img {
+    img {
+      width: 100%;
+      height: 80vh;
+    }
+  }
+  .trailer__info {
+    iframe {
+      margin-top: 2rem;
+      width: 30rem;
+      height: 20rem;
+      border: 2px solid snow;
+    }
+  }
+  .bg3 {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+  }
+}

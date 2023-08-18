@@ -1,0 +1,99 @@
+@use "../../mixin.scss" as *;
+.welcomeContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    margin: auto;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+    gap: 4rem;
+    @include tablet() {
+      gap: 1rem;
+      width: 100%;
+      height: 90%;
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .info {
+    width: 50%;
+    height: 80%;
+    @include tablet() {
+      order: 2;
+      padding-top: 5rem;
+      width: 80%;
+      text-align: center;
+      .btns {
+        justify-content: center;
+      }
+    }
+    @include phone() {
+      padding-top: 1rem;
+      width: 100%;
+      text-align: center;
+      .title {
+        line-height: 2rem;
+        span {
+          font-size: 0.8rem !important;
+        }
+        h2 {
+          font-size: 1rem !important;
+          line-height: 2rem;
+        }
+      }
+      .description {
+        font-size: 0.6rem;
+      }
+      .btns {
+        justify-content: center;
+        button {
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 1rem;
+    }
+    .btns {
+      margin-top: 1rem;
+      display: flex;
+    }
+  }
+  .hoverimgae {
+    width: 60%;
+    height: 100%;
+    pointer-events: none;
+    img {
+      height: 100%;
+    }
+    @include tablet() {
+      order: 1;
+      padding-top: 2rem;
+      height: 30rem;
+      img {
+        width: 90%;
+      }
+    }
+    @include phone() {
+      height: 15rem;
+    }
+  }
+  .bgWelcome {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: -2;
+  }
+}
