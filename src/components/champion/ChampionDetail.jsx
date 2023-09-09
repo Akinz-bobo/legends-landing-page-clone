@@ -1,4 +1,4 @@
-import './championDetail.scss'
+import './ChampionDetail.scss'
 
 import { closeIcon } from '../../assets/images'
 import { useRef } from 'react'

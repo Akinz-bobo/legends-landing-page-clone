@@ -53,8 +53,10 @@ const Home = () => {
                     id={index}
                 />)
             }
-            <div className="scroll">
-                <span>Scroll to see effect</span>
+            <div className="scroll " style={{ textAlign: "center" }}>
+                <span>Scroll to see effect</span> <br />
+                <span><span style={{ color: "red" }}>&#10084;</span><em>Akinola</em><span style={{ color: "red" }}>&#10084;</span></span>
+
             </div>
         </>
     )

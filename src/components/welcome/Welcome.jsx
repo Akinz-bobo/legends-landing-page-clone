@@ -38,7 +38,7 @@ const Welcome = ({ isActive }) => {
                     >
                         {
                             champImgs.map((pic) => (
-                                <SwiperSlide>
+                                <SwiperSlide key={pic}>
                                     <img src={pic} alt={pic} />
                                 </SwiperSlide>
                             ))
